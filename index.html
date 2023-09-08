@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404|پیدا نشد</title>
+    <meta name="robots" content="noindex nofollow"/>
+    <!-- <link rel="stylesheet" href="https://cdn.avid2.ir/css/404.css"> -->
+    <link rel="stylesheet" href="./404.css">
+    <link rel="stylesheet" href="/files/css/font-style.css">
+    <style>
+        :root{
+    --green:#0bc92e;
+}
+*{margin: 0;padding: 0;
+    box-sizing: border-box;
+    outline: none;border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+    list-style-type: none;
+}
+h1,h2,h3,h4,h5,h6,p,.btn,.lobo,a,span{
+    position: relative;
+    animation-name: identifier;
+    animation-duration: 4s;
+    animation-delay: -2s;
+    animation-iteration-count: 1;
+    animation-direction: normal; 
+    animation-fill-mode: forwards; 
+}
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+header{
+    position: fixed;
+    top: 0;left: 0;right: 0;
+    background-color: #fff;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+header .logo img{
+    height: auto;
+    width: 8rem;
+    background-size: cover;
+}
+header .navbar{
+    margin-left: 10rem;
+}
+header .navbar a{
+    font-size: 1.7rem;
+    padding: 0 1.5rem;
+    color: #666;
+}
+header .navbar a:hover{
+    color:var(--green)
+}
+
+
+header #toggler{
+    display: none;
+}
+header .fa-bars{
+    font-size: 1.1rem;
+    color: #333;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border: .1rem solid rgba(0, 0, 0, .3);
+    display: none;
+}
+
+
+@media (max-width:991px) {
+
+    html{
+        font-size: 55%;
+    }
+
+    header{
+        padding: 2rem;
+    }
+    section{
+        padding: 2rem;
+    }
+    .home{
+        background-position: center;
+    }
+    
+    
+}
+@media (max-width:768px){
+    header .fa-bars{
+        display: block;
+    }
+    header .navbar{
+        position: absolute;
+        top: 100%;left: 0;right: 0;
+        background: #eee;
+        border-top: .1rem solid rgba(0, 0, 0, .1);
+        clip-path: polygon(0 0,100% 0,100% 0,0 0);
+        margin-left: 0;
+    }
+    header #toggler:checked ~ .navbar{
+        clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+    }
+    header .navbar a{
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background: #fff;
+        border: .1rem solid rgba(0, 0, 0, .1);
+        display: block;
+    }
+    
+    
+    
+}
+@media (max-width:450px) {
+
+    html{
+        font-size: 50%;
+    }
+}
+.home{
+    background: url(../files/img/IMG_2190.JPG) center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+.home .content{
+    max-width: 53rem;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .3);
+    border-radius: 30px 10px 40px 80px;
+}
+.home .content h1{
+    font-size: 6rem;
+    color: white;
+    margin-top: 5rem;
+}
+.home h2{
+    font-size: 3rem;
+    color: #eee;
+    margin-top: 5rem;
+}
+.home p{
+    font-size: 2.5rem;
+    margin: 2rem 30%;
+    color: #fff;
+}
+
+
+.footer .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+}
+.footer .box-container .box{
+    flex: 1 1 25rem;
+}
+.footer .box-container .box h3{
+    color: #333;
+    font-size: 2.5rem;
+    padding: 1rem 0;
+}
+.footer .box-container .box a{
+    display: block;
+    color: #666;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+.footer .box-container .box a:hover{
+    color: var(--green);
+    text-decoration: underline;
+}
+.footer .credit{
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    padding-top: 2.5rem;
+    font-size: 2rem;
+    color: #333;
+    border-top:  .1rem solid rgba(0, 0, 0, .1);
+
+}
+.footer .credit span{
+    color: var(--green);
+}
+.class{
+    width: 10rem;
+}
+.info{
+    margin-right: 1rem;
+}
+.footer{
+    padding: 2rem 9%;
+}
+.sss iframe{
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, .3);
+    border-radius: 30px;
+}
+@media (max-width:505px) {
+    .sss iframe{
+        height: auto;
+        width: 28rem;
+    }
+}
+@media (max-width:768px){
+    .about p{
+        margin: 0 ;
+}
+.footer{
+    border-top: .1rem solid rgba(0, 0, 0, .1);
+}}
+@media print {
+    header{
+        display: none;
+    }
+    svg.svg1{
+        display: none;
+    }
+    svg.svg2{
+        display: none;
+    }
+    section.footer{
+        display: none;
+    }
+}
+/* section{
+    padding: 2rem 9%;
+} */
+.loading-page{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #999;
+    transition: ease all .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.loaded{
+    opacity: 0;
+    visibility: hidden;
+}
+.loading-circle{
+    width: 100px;
+    height: 100px;
+    border: 3px solid black;
+    border-radius: 50%;
+    border-bottom: none;
+    border-left: none;
+    transform: rotate(0);
+    animation-name:loader;
+    animation-iteration-count: infinite;
+    animation-duration: .5s;
+    animation-timing-function: linear;
+}
+@keyframes loader {
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes identifier {
+    0%  { left:0px; top:500px;filter: blur(5px);}
+  100% { left:0px; top:0px;}
+}
+.up{
+    /* transform: none;    */
+    /* pointer-events: visible; */
+    position: -webkit-sticky;
+    position: sticky;
+    right:20px;
+    top:90%;
+    float: left;
+    /* z-index: 350; */
+    width: 50px;
+    height: 50px;
+    /* opacity: 1; */
+    color: #333;
+    background-image: url(/up-arrow_992703.png);
+    background-size: cover;
+}
+.up a{
+    padding: 3rem;
+}
+    </style>
+    <script>
+        window.addEventListener("load",function(){
+            document.querySelector(".loading-page").classList.add("loaded")
+        })
+    </script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+     <!-- Start of HubSpot Embed Code -->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/141759032.js"></script>
+  <!-- End of HubSpot Embed Code -->
+</head>
+<body>
+    <div class="loading-page">
+        <div class="loading-circle">
+        </div>
+    </div>
+    <header>
+        <input type="checkbox" name="" id="toggler">
+        <label for="toggler" class="fas fa-bars"></label>
+
+        <a href="#" class="logo"><img src="../files/logo/Mock--up copy.png" alt="img"></a>
+
+        <nav class="navbar">
+            <a href="../index.html#home">صفحه اصلی</a>
+            <a href="../index.html#about">در باره آوید</a>
+            <a href="../index.html#products">  post box</a>
+            <a href="../index.html#review">تماس باما </a>
+        
+        </nav>
+
+        
+    </header>
+
+    <section class="home">
+        <div class="content">
+            <h1>404</h1>
+            <h2>پیدا نشد!</h2>
+            <p>کاربر گرامی صفحه موردنظر وجود ندارد یا حذف شده است!</p>
+        </div>
+    </section>
+    <div class="up">
+        <a href="#">
+        </a>
+    </div>
+
+    <section class="footer" id="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="">صفحه اصلی</a>
+                <a href="">درباره آوید</a>
+                <a href="">post box</a>
+                <a href="">تماس باما</a>
+            
+            </div>
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="">صفحه اصلی</a>
+                <a href="">درباره آوید</a>
+                <a href="">post box</a>
+                <a href="">تماس باما</a>
+            
+            </div>
+            <div class="box">
+                <h3>آدرس مجموعه گلخانه آوید</h3>
+                <section class="sss">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48307.86595244719!2d51.71478376258193!3d31.881979436550306!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fbbedf8e5f46533%3A0x860daed813be6a8e!2z2YXYrNmF2YjYudmHINqv2YTYrtin2YbZhyDYotmI24zYrw!5e0!3m2!1sfa!2s!4v1689358639332!5m2!1sfa!2s" width="400" height="300" style="border:0;padding: 2rem 9%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </section>
+            x
+            </div>
+        </div>
+        <div class="credit">
+            تمامی اطلاعات  <span> آوید </span> محفوظ است.©
+        </div>
+    </section>
+</body>
+</html>
